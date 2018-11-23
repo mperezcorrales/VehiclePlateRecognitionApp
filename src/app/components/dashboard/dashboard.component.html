@@ -1,0 +1,74 @@
+<img src="https://www.urbanova.com.pe/wp-content/uploads/2017/11/Urbanova.png" style="display:block;margin:auto;">
+<h1 style="margin-top: 10px; margin-bottom: 30px; color: #123462">Detector de placas Urbanova - La Rambla San Borja</h1>
+
+<div class="row">
+  <div class="col-6">
+    <div class="card" style="background-color: #fff8e1">
+      <div class="card-body">
+        <h4 class="card-title">Placas detectadas</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Placa</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Confianza (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let foundPlate of foundPlates">
+              <td>{{foundPlate.plateId}}</td>
+              <td>{{foundPlate.date}}</td>
+              <td>{{foundPlate.trust}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <div class="card" style="background-color: #d50000">
+      <div class="card-body">
+        <h4 class="card-title" style="color: #FFFFFF">Placas detectadas robadas</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" style="color: #FFFFFF">Placa</th>
+              <th scope="col" style="color: #FFFFFF">Fecha</th>
+              <th scope="col" style="color: #FFFFFF">Confianza (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let foundPlate of foundPlatesStolen">
+              <td style="color: #FFFFFF">{{foundPlate.plateId}}</td>
+              <td style="color: #FFFFFF">{{foundPlate.date}}</td>
+              <td style="color: #FFFFFF">{{foundPlate.trust}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="col-4">
+    <div class="card" style="background-color: #e8f5e9">
+      <div class="card-body">
+        <h4 class="card-title">Placas detectadas sin SOAT</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Placa</th>
+              <th scope="col">Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let foundPlate of foundPlatesWithoutSoat">
+              <td>{{foundPlate.plateId}}</td>
+              <td>{{foundPlate.date}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+</div>
